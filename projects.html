@@ -18,13 +18,17 @@
 
   <h1 class="text-4xl font-bold mb-10 text-center">Projects</h1>
 
+  <!-- PROJECT GRID -->
   <div class="grid md:grid-cols-2 gap-8">
 
-    <!-- PROJECT CARD -->
-    <div class="border rounded-xl p-6 shadow-sm hover:shadow-md transition">
+    <!-- VPC PROJECT -->
+    <div class="bg-white border rounded-xl p-6 shadow-sm hover:shadow-lg transition">
       <div class="flex justify-between items-center mb-3">
-        <h2 class="text-2xl font-semibold">Multi‑Tier VPC Architecture</h2>
-        <span class="text-sm bg-green-100 text-green-700 px-3 py-1 rounded-full">Planned</span>
+        <h2 class="text-2xl font-semibold flex items-center gap-2">
+          <img src="icons/vpc.svg" class="w-7 h-7" alt="VPC icon">
+          Multi‑Tier VPC Architecture
+        </h2>
+        <span class="text-sm bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full">Planned</span>
       </div>
 
       <span class="text-sm text-gray-500 block mb-3">Planned: May 2026</span>
@@ -37,14 +41,17 @@
         <strong>AWS Services:</strong> VPC, EC2, RDS, IAM
       </p>
 
-      <a href="#" class="text-blue-600 hover:underline">View on GitHub →</a>
+      <a href="#" class="text-blue-600 font-medium hover:underline">View on GitHub →</a>
     </div>
 
-    <!-- PROJECT CARD -->
-    <div class="border rounded-xl p-6 shadow-sm hover:shadow-md transition">
+    <!-- SERVERLESS PROJECT -->
+    <div class="bg-white border rounded-xl p-6 shadow-sm hover:shadow-lg transition">
       <div class="flex justify-between items-center mb-3">
-        <h2 class="text-2xl font-semibold">Serverless Image Pipeline</h2>
-        <span class="text-sm bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full">Expected May 2026</span>
+        <h2 class="text-2xl font-semibold flex items-center gap-2">
+          <img src="icons/lambda.svg" class="w-7 h-7" alt="Lambda icon">
+          Serverless Image Pipeline
+        </h2>
+        <span class="text-sm bg-blue-100 text-blue-700 px-3 py-1 rounded-full">Expected May 2026</span>
       </div>
 
       <span class="text-sm text-gray-500 block mb-3">Expected: April 2026</span>
@@ -57,15 +64,16 @@
         <strong>AWS Services:</strong> S3, Lambda, DynamoDB, EventBridge
       </p>
 
-      <a href="#" class="text-blue-600 hover:underline">View on GitHub →</a>
+      <a href="#" class="text-blue-600 font-medium hover:underline">View on GitHub →</a>
     </div>
 
-    <!-- PROJECT CARD -->
-
-        <!-- PROJECT CARD -->
-    <div class="border rounded-xl p-6 shadow-sm hover:shadow-md transition">
+    <!-- PORTFOLIO WEBSITE PROJECT -->
+    <div class="bg-white border rounded-xl p-6 shadow-sm hover:shadow-lg transition">
       <div class="flex justify-between items-center mb-3">
-        <h2 class="text-2xl font-semibold">Cloud Portfolio Website & CI/CD Pipeline</h2>
+        <h2 class="text-2xl font-semibold flex items-center gap-2">
+          <img src="icons/cloudfront.svg" class="w-7 h-7" alt="CloudFront icon">
+          Cloud Portfolio Website & CI/CD Pipeline
+        </h2>
         <span class="text-sm bg-green-100 text-green-700 px-3 py-1 rounded-full">Completed</span>
       </div>
 
@@ -79,22 +87,37 @@
         <strong>AWS Services:</strong> S3, CloudFront, Route 53, IAM, ACM, GitHub Actions
       </p>
 
-      <a href="https://github.com/chrisewart-aws/cloud-portfolio" class="text-blue-600 hover:underline">View on GitHub →</a>
+      <a href="https://github.com/chrisewart-aws/cloud-portfolio" class="text-blue-600 font-medium hover:underline">View on GitHub →</a>
     </div>
-   <div class="project-card">
-    <h3>CloudFront Website Deployment & Security Pipeline</h3>
-    <span class="status completed">Completed: April 2026</span>
-    <p>
-        A fully automated CI/CD pipeline using GitHub Actions to deploy a static website to Amazon S3 
-        and refresh CloudFront globally. The deployment is secured with IAM least‑privilege roles, 
-        HTTPS via ACM, and DNS routing through Route 53. This project also forms the foundation for a 
-        broader AWS security hardening initiative.
-    </p>
-    <p><strong>AWS Services:</strong> S3, CloudFront, Route 53, IAM, ACM</p>
-    <p><strong>Tools:</strong> GitHub Actions</p>
-    <a href="YOUR_GITHUB_REPO_URL" class="project-link">View on GitHub →</a>
-   </div>
 
+    <!-- SECURITY PIPELINE PROJECT -->
+    <div class="bg-white border rounded-xl p-6 shadow-sm hover:shadow-lg transition">
+      <div class="flex justify-between items-center mb-3">
+        <h2 class="text-2xl font-semibold flex items-center gap-2">
+          <img src="icons/shield.svg" class="w-7 h-7" alt="Security icon">
+          CloudFront Website Deployment & Security Pipeline
+        </h2>
+        <span class="text-sm bg-green-100 text-green-700 px-3 py-1 rounded-full">Completed</span>
+      </div>
+
+      <span class="text-sm text-gray-500 block mb-3">Completed: April 2026</span>
+
+      <p class="text-gray-600 mb-4">
+        A fully automated CI/CD pipeline using GitHub Actions to deploy a static website to Amazon S3 and refresh CloudFront globally. Secured with IAM least‑privilege roles, HTTPS via ACM, and DNS routing through Route 53. Forms the foundation for a broader AWS security hardening initiative.
+      </p>
+
+      <p class="text-sm text-gray-500 mb-1">
+        <strong>AWS Services:</strong> S3, CloudFront, Route 53, IAM, ACM
+      </p>
+
+      <p class="text-sm text-gray-500 mb-4">
+        <strong>Tools:</strong> GitHub Actions
+      </p>
+
+      <a href="YOUR_GITHUB_REPO_URL" class="text-blue-600 font-medium hover:underline">View on GitHub →</a>
+    </div>
+
+  </div>
 
   <!-- TIMELINE SECTION -->
   <section class="mt-20">
@@ -102,13 +125,12 @@
 
     <div class="space-y-4">
 
-
-       <div class="flex justify-between border-b pb-2">
+      <div class="flex justify-between border-b pb-2">
         <span class="font-medium">Cloud Portfolio Website & CI/CD Pipeline</span>
         <span class="text-gray-500">Completed: April 2026</span>
       </div>
-      
-       <div class="flex justify-between border-b pb-2">
+
+      <div class="flex justify-between border-b pb-2">
         <span class="font-medium">Multi‑Tier VPC Architecture</span>
         <span class="text-gray-500">Completed: May 2026</span>
       </div>
