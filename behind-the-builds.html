@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Behind the Builds | Chris Ewart</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- NAVIGATION -->
+  <nav class="bg-white shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-xl font-semibold">Chris Ewart</a>
+      <div class="space-x-6">
+        <a href="index.html" class="hover:text-blue-600">Home</a>
+        <a href="projects.html" class="hover:text-blue-600">Projects</a>
+        <a href="behind-the-builds.html" class="text-blue-600 font-semibold">Behind the Builds</a>
+        <a href="about.html" class="hover:text-blue-600">About</a>
+        <a href="contact.html" class="hover:text-blue-600">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <header class="max-w-4xl mx-auto mt-12 px-4">
+    <h1 class="text-4xl font-bold mb-4">Behind the Builds</h1>
+    <p class="text-lg text-gray-700 leading-relaxed">
+      This is where I document the things AWS taught me, the things I broke, the things I fixed, 
+      and the things I still don’t fully understand but pretend I do. It’s part study notes, part 
+      troubleshooting diary, part therapy session for anyone who’s ever stared at an IAM policy 
+      and questioned their life choices.
+    </p>
+  </header>
+
+  <!-- MAIN CONTENT + SIDEBAR -->
+  <div class="max-w-6xl mx-auto mt-12 px-4 grid grid-cols-1 lg:grid-cols-3 gap-10">
+
+    <!-- POSTS -->
+    <main class="lg:col-span-2 space-y-10">
+
+      <!-- POST 1 -->
+      <article class="bg-white p-6 rounded-lg shadow">
+        <h2 class="text-2xl font-semibold mb-2">CloudFront: The service that caches everything except my sanity</h2>
+        <p class="text-sm text-gray-500 mb-4">April 2026 • Troubleshooting, DevOps</p>
+        <p class="leading-relaxed">
+          Nothing humbles you quite like deploying your website, refreshing the page, and seeing… 
+          absolutely nothing change. For a solid hour I thought I’d broken the entire pipeline. 
+          Turns out CloudFront was just proudly serving the cached version like a stubborn librarian 
+          refusing to update the records.
+        </p>
+        <p class="mt-3 leading-relaxed">
+          The fix? Invalidation. The lesson? Always invalidate. The emotional damage? Ongoing.
+        </p>
+      </article>
+
+      <!-- POST 2 -->
+      <article class="bg-white p-6 rounded-lg shadow">
+        <h2 class="text-2xl font-semibold mb-2">IAM: The service that reminds me I know nothing</h2>
+        <p class="text-sm text-gray-500 mb-4">April 2026 • Security, Study Notes</p>
+        <p class="leading-relaxed">
+          IAM policies are like riddles written by someone who doesn’t want you to solve them. 
+          One minute everything works, the next minute AWS decides you’re not allowed to touch 
+          your own resources. I swear IAM has a personal vendetta against me.
+        </p>
+        <p class="mt-3 leading-relaxed">
+          But after enough trial, error, and questioning my life choices, I finally got my 
+          least‑privilege roles working. Progress.
+        </p>
+      </article>
+
+      <!-- POST 3 -->
+      <article class="bg-white p-6 rounded-lg shadow">
+        <h2 class="text-2xl font-semibold mb-2">GitHub Actions: It deployed… but did it really</h2>
+        <p class="text-sm text-gray-500 mb-4">April 2026 • CI/CD, DevOps</p>
+        <p class="leading-relaxed">
+          GitHub Actions told me everything was green. Success. Deployed. Beautiful. Except the 
+          website looked exactly the same. Turns out CloudFront doesn’t care what GitHub says — 
+          it will serve old content until you explicitly tell it otherwise.
+        </p>
+        <p class="mt-3 leading-relaxed">
+          Lesson learned: automate your invalidations or prepare for confusion.
+        </p>
+      </article>
+
+      <!-- POST 4 -->
+      <article class="bg-white p-6 rounded-lg shadow">
+        <h2 class="text-2xl font-semibold mb-2">The Great SVG Mystery: Why my icons refused to show</h2>
+        <p class="text-sm text-gray-500 mb-4">April 2026 • Frontend, Troubleshooting</p>
+        <p class="leading-relaxed">
+          I spent longer than I’d like to admit wondering why my icons weren’t appearing. 
+          Wrong filenames? Check. Wrong paths? Check. Browser caching? Oh yes. Turns out the 
+          browser was clinging to the old versions like a dragon guarding treasure.
+        </p>
+        <p class="mt-3 leading-relaxed">
+          Hard refresh saved the day. And now the icons look great.
+        </p>
+      </article>
+
+      <!-- POST 5 -->
+      <article class="bg-white p-6 rounded-lg shadow">
+        <h2 class="text-2xl font-semibold mb-2">Git and the CRLF Panic Attacks</h2>
+        <p class="text-sm text-gray-500 mb-4">April 2026 • Dev Tools, Study Notes</p>
+        <p class="leading-relaxed">
+          Git decided to warn me — loudly — about line endings. CRLF, LF, conversions, 
+          warnings everywhere. For a moment I thought I’d corrupted the entire repo. 
+          Spoiler: everything was fine. Git was just being dramatic.
+        </p>
+        <p class="mt-3 leading-relaxed">
+          The fix? Set <code>core.autocrlf</code>. The lesson? Don’t panic when Git shouts.
+        </p>
+      </article>
+
+    </main>
+
+    <!-- SIDEBAR -->
+    <aside class="space-y-6">
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h3 class="text-xl font-semibold mb-4">Tags</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Troubleshooting</span>
+          <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm">DevOps</span>
+          <span class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-sm">Security</span>
+          <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm">Study Notes</span>
+          <span class="px-3 py-1 bg-pink-100 text-pink-700 rounded-full text-sm">Frontend</span>
+          <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">CI/CD</span>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+
+  <footer class="mt-20 py-6 text-center text-gray-500">
+    © 2026 Chris Ewart — Built in the cloud
+  </footer>
+
+</body>
+</html>
