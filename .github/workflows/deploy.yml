@@ -19,9 +19,9 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: ${{ secrets.AWS_REGION }}
 
-    - name: Sync files to S3
+    - name: Sync files to S3 (force upload)
       run: |
-        aws s3 sync . s3://${{ secrets.S3_BUCKET }} --delete --exclude ".git/*" --exclude ".github/*"
+        aws s3 sync . s3://${{ secrets.S3_BUCKET }} --delete --exact-timestamps --exclude ".git/*" --exclude ".github/*"
 
     - name: Invalidate CloudFront cache
       run: |
