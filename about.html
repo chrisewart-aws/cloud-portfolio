@@ -4,6 +4,15 @@
   <meta charset="UTF-8">
   <title>About | Chris</title>
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* Faint multi‑AZ VPC background for hero section */
+    .vpc-hero-bg {
+      background-image: url("data:image/svg+xml,%3Csvg width='1600' height='900' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23d1d5db' stroke-width='1' opacity='0.12'%3E%3Crect x='100' y='100' width='350' height='220' rx='12'/%3E%3Crect x='500' y='100' width='350' height='220' rx='12'/%3E%3Crect x='900' y='100' width='350' height='220' rx='12'/%3E%3Crect x='100' y='380' width='350' height='220' rx='12'/%3E%3Crect x='500' y='380' width='350' height='220' rx='12'/%3E%3Crect x='900' y='380' width='350' height='220' rx='12'/%3E%3Cline x1='275' y1='320' x2='275' y2='380'/%3E%3Cline x1='675' y1='320' x2='675' y2='380'/%3E%3Cline x1='1075' y1='320' x2='1075' y2='380'/%3E%3C/g%3E%3C/svg%3E");
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
 </head>
 
 <body class="bg-white text-gray-900 px-6 py-12">
@@ -16,14 +25,16 @@
     <a href="contact.html" class="text-gray-700 hover:text-blue-600 transition">Contact</a>
   </nav>
 
-  <h1 class="text-4xl font-bold mb-6 text-center">About Me</h1>
+  <!-- HERO SECTION WITH FAINT VPC BACKGROUND -->
+  <section class="vpc-hero-bg py-24 text-center bg-white/70 backdrop-blur-sm rounded-xl shadow-sm mb-16">
+    <h1 class="text-5xl font-bold mb-4">About Me</h1>
+    <p class="max-w-2xl mx-auto text-gray-700 text-lg">
+      I'm Chris — a cloud engineering enthusiast with a strong interest in AWS, networking, and building real‑world infrastructure projects.
+      My goal is to become a Cloud Engineer and eventually a Solutions Architect.
+    </p>
+  </section>
 
-  <p class="text-gray-700 max-w-2xl mx-auto text-center">
-    I'm Chris — a cloud engineering enthusiast with a strong interest in AWS, networking, and building real‑world infrastructure projects.
-    My goal is to become a Cloud Engineer and eventually a Solutions Architect.
-  </p>
-  
-<!-- EDUCATION SECTION -->
+  <!-- EDUCATION SECTION -->
   <section class="bg-white py-10 px-6 max-w-3xl mx-auto">
     <h2 class="text-3xl font-bold text-[#F97316] mb-6">
       Education & Certifications
@@ -50,6 +61,7 @@
       <span class="font-semibold">Learning Focus:</span> Developing strong foundations in cloud architecture, networking, and Linux systems to support a future career in cloud engineering or DevOps.
     </p>
   </section>
+
   <!-- FOOTER -->
   <footer class="mt-20 pt-8 border-t text-center text-gray-600">
     <p>© 2026 Chris — Cloud Portfolio</p>
