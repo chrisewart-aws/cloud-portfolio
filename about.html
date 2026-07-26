@@ -7,14 +7,28 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
-    /* Cleaner blueprint background */
+    /* Subtle, professional blueprint background */
     .vpc-hero-bg {
       background-image: url("aws about background.png");
-      background-size: 1200px auto;
-      background-position: center 180px;
+      background-size: 1050px auto;     /* slightly smaller = less interference */
+      background-position: center 240px; /* pushes blueprint lower */
       background-repeat: no-repeat;
       background-attachment: fixed;
-      opacity: 0.75;
+      opacity: 0.22;                     /* perfect subtlety */
+      position: relative;
+    }
+
+    /* Soft overlay to push blueprint behind content */
+    .vpc-hero-bg::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255,255,255,0.30); /* gentle veil */
+      pointer-events: none;
+      z-index: -1;
     }
   </style>
 </head>
